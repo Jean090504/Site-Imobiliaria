@@ -1,0 +1,524 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <meta name="Revisit-After" content="30 days">
+
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!--BOOTSTRAP ICONS-->
+    <link rel="icon" type="image/png" href="imagens/elemento1.png">
+
+    <!--Jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--FONT-AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!--PARALLAX-->
+    <link href="https://cdn.jsdelivr.net/npm/universal-parallax@1.3.2/dist/universal-parallax.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/universal-parallax@1.3.2/dist/universal-parallax.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+    <meta name="description" content="Encontre as melhores propriedades em SP com a Imobiliária Exemplo! Uma ampla carteira de imóveis esperando por você. Encontre seu lar dos sonhos hoje mesmo.">
+    <meta property="og:description" content="Encontre as melhores propriedades em SP com a Imobiliária Exemplo! Uma ampla carteira de imóveis esperando por você. Encontre seu lar dos sonhos hoje mesmo.">
+    <meta property="twitter:description" content="Encontre as melhores propriedades em SP com a Imobiliária Exemplo! Uma ampla carteira de imóveis esperando por você. Encontre seu lar dos sonhos hoje mesmo.">
+    <meta property="og:title" content="Imobiliária Exemplo | Encontre sua casa dos sonhos em SP">
+    <meta property="twitter:title" content="Imobiliária Exemplo | Encontre sua casa dos sonhos em SP">
+    <meta property="og:url" content="http://imobiliariaexemplo.com">
+    <meta property="twitter:url" content="http://imobiliariaexemplo.com">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://imobiliariaexemplo.com">
+    <meta property="og:image" content="https://via.placeholder.com/800x600.png">
+    <meta property="twitter:image" content="https://via.placeholder.com/800x600.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height=" 600">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="image_src" href="https://via.placeholder.com/800x600.png">
+    <title>Imobiliária Exemplo</title>
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.26tY-h6gH9w.L.W.O/am=GAY/d=0/rs=AN8SPfrev-A3NvrBP0gNq8zXCqKY7IcBLA/m=el_main_css">
+    <script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/_/translate_http/_/js/k=translate_http.tr.pt_BR.1z6TPn1bKLs.O/am=ABA/d=1/exm=el_conf/ed=1/rs=AN8SPfonHpCDBegHKuR77P-X18unCa-TFQ/m=el_main"></script>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            padding-top: 80px; /* Adicionado para evitar que o conteúdo fique escondido atrás da navbar fixa */
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        #home {
+            height: 100vh;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: url('Imagens/fundo.png') no-repeat center center;
+            background-size: cover;
+        }
+
+        #sobre, #servicos, #contato, #galeria {
+            padding: 60px 0;
+        }
+
+            #servicos .card {
+                margin-bottom: 20px;
+            }
+
+            #sobre img {
+                max-width: 100%;
+                border-radius: 8px;
+            }
+
+        .form-control {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1.1em;
+        }
+
+        /* Custom CSS for centralizing and animating the navigation */
+        .navbar-brand, .navbar-nav .nav-link {
+            font-size: 1.5em;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+            .navbar-brand:hover, .navbar-nav .nav-link:hover {
+                color: #007BFF;
+            }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .navbar {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .about-description {
+            font-size: 1.25em;
+        }
+
+        .navbar-brand img {
+            height: 30px; /* Adjust the height as needed */
+            margin-right: 10px; /* Space between image and text */
+        }
+
+        /* Estilização do ícone do WhatsApp */
+        .whatsapp-icon {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: pulse 1.5s infinite;
+        }
+
+            .whatsapp-icon i {
+                margin: 0; /* Remove qualquer margem para centralizar o ícone */
+            }
+
+            .whatsapp-icon:hover {
+                color: white;
+                text-decoration: none;
+            }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/11953431041" class="whatsapp-icon" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="imagens/elemento1.png" alt="Logo">
+                Imobiliária Exemplo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#galeria">Casas à venda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="container text-center">
+                <h1 class="display-4">
+                    Bem-vindo à Imobiliária Exemplo
+                </h1>
+                <p class="lead">Encontre sua casa dos sonhos em São Paulo</p>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-5 bg-light">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Venda de Imóveis</h5>
+                                <p class="card-text">Oferecemos as melhores opções de venda de imóveis em São Paulo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Aluguel de Imóveis</h5>
+                                <p class="card-text">Encontre o imóvel ideal para alugar com a Imobiliária Exemplo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Consultoria Imobiliária</h5>
+                                <p class="card-text">Nossos especialistas estão prontos para te ajudar a encontrar o imóvel dos seus sonhos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Avaliação de Propriedades</h5>
+                                <p class="card-text">Avaliamos sua propriedade com precisão e transparência.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Gestão de Propriedades</h5>
+                                <p class="card-text">Cuidamos da administração do seu imóvel para você.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Intermediação de Negócios</h5>
+                                <p class="card-text">Facilitamos a compra e venda de propriedades comerciais.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Consultoria Jurídica</h5>
+                                <p class="card-text">Assessoria jurídica completa para questões imobiliárias.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Planejamento Imobiliário</h5>
+                                <p class="card-text">Ajuda no planejamento para investimentos imobiliários.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Serviços de Renovação</h5>
+                                <p class="card-text">Renovação e reformas para valorizar seu imóvel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Serviços de Mudança</h5>
+                                <p class="card-text">Oferecemos serviços de mudança para facilitar sua transição.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Financiamento Imobiliário</h5>
+                                <p class="card-text">Ajudamos a encontrar as melhores opções de financiamento.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Decoração de Interiores</h5>
+                                <p class="card-text">Serviços de decoração para transformar seu imóvel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="py-5">
+            <div class="container">
+                <h2>Casas à venda</h2>
+                <p>Quer vender ou deseja alugar sua casa como essas a baixo?, nos contate.</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Imagens/foto1.png" class="d-block w-100" alt="Foto 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Imagens/foto2.png" class="d-block w-100" alt="Foto 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Imagens/foto3.png" class="d-block w-100" alt="Foto 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <p>Casa em Recanto do Exemplo</p>
+                        <p><a href="detalhes_recanto.html">R$ 400.000</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Imagens/foto4.png" class="d-block w-100" alt="Foto 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Imagens/foto5.png" class="d-block w-100" alt="Foto 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Imagens/foto6.png" class="d-block w-100" alt="Foto 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <p>Casa em Minas do Exemplo</p>
+                        <p><a href="detalhes_minas.html">R$ 400.000</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="carouselExampleIndicators3" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Imagens/foto7.png" class="d-block w-100" alt="Foto 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Imagens/foto8.png" class="d-block w-100" alt="Foto 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Imagens/foto9.png" class="d-block w-100" alt="Foto 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <p>Casa em Rio grande do Exemplo</p>
+                        <p><a href="Paginas/detalhes_riogrande.html">R$ 450.000</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-5">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="carouselExampleIndicators4" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Imagens/logo1.png" class="d-block w-100" alt="Sobre Nós 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Imagens/grupo1.png" class="d-block w-100" alt="Sobre Nós 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Imagens/logo2.png" class="d-block w-100" alt="Sobre Nós 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="about-description">Descubra as melhores propriedades em São Paulo com a Imobiliária Exemplo! Nossa empresa oferece uma ampla carteira de imóveis que está esperando por você. Seja para compra, venda ou aluguel, temos opções que se encaixam perfeitamente nas suas necessidades. Nossa equipe de especialistas está sempre pronta para te ajudar a encontrar o imóvel dos seus sonhos com total transparência, segurança e profissionalismo. Não perca tempo, venha conhecer nossos serviços e encontre o lar ideal para você e sua família hoje mesmo. Confie na Imobiliária Exemplo para realizar o seu sonho da casa própria.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-5">
+            <div class="container">
+                <h2>Contato</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label">Mensagem</label>
+                        <textarea class="form-control" id="mensagem" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 Imobiliária Exemplo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Adjust scroll position for fixed navbar
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const yOffset = -80; // Adjust according to your navbar height
+                const yPosition = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                window.scrollTo({ top: yPosition, behavior: 'smooth' });
+            });
+        });
+
+        new universalParallax().init({
+            speed: 6.0
+        });
+    </script>
+</body>
+</html>
