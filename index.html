@@ -183,6 +183,52 @@
                 transform: scale(1);
             }
         }
+
+        .house-info {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+            .house-info p {
+                margin: 5px 0;
+            }
+
+            .house-info a {
+                color: #007BFF;
+                font-weight: bold;
+            }
+
+                .house-info a:hover {
+                    color: #0056b3;
+                    text-decoration: underline;
+                }
+
+        .description-text {
+            line-height: 1.6;
+            color: #333;
+        }
+
+            .description-text b {
+                color: #007BFF;
+            }
+
+            .description-text i {
+                color: #555;
+            }
+
+        .section-header {
+            margin-bottom: 20px;
+        }
+
+            .section-header h2 {
+                font-size: 2.5em;
+                margin-bottom: 10px;
+            }
+
+            .section-header p {
+                font-size: 1.2em;
+                color: #666;
+            }
     </style>
 </head>
 <body>
@@ -196,7 +242,7 @@
             <a class="navbar-brand" href="#">
                 <img src="Imagens/elemento1.png" alt="Logo">
                 Imobiliária Exemplo
-            </a>            
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -234,7 +280,10 @@
 
         <section id="servicos" class="py-5 bg-light">
             <div class="container">
-                <h2>Nossos Serviços</h2>
+                <div class="section-header text-center">
+                    <h2>Nossos Serviços</h2>
+                    <p>Oferecemos uma gama completa de serviços imobiliários para atender todas as suas necessidades.</p>
+                </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card">
@@ -338,8 +387,10 @@
 
         <section id="galeria" class="py-5">
             <div class="container">
-                <h2>Casas à venda</h2>
-                <p>Quer vender ou deseja alugar sua casa como essas a baixo?, nos contate.</p>
+                <div class="section-header text-center">
+                    <h2>Casas à venda</h2>
+                    <p>Quer vender ou deseja alugar sua casa como essas abaixo? Entre em contato conosco.</p>
+                </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel">
@@ -368,8 +419,10 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                        <p>Casa em Recanto do Exemplo</p>
-                        <p><a href="detalhes_recanto.html">R$ 400.000</a></p>
+                        <div class="house-info">
+                            <p><b>Casa em Recanto do Exemplo</b></p>
+                            <p><a href="detalhes_recanto.html">R$ 400.000</a></p>
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
@@ -398,8 +451,10 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                        <p>Casa em Minas do Exemplo</p>
-                        <p><a href="detalhes_minas.html">R$ 400.000</a></p>
+                        <div class="house-info">
+                            <p><b>Casa em Minas do Exemplo</b></p>
+                            <p><a href="detalhes_minas.html">R$ 400.000</a></p>
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <div id="carouselExampleIndicators3" class="carousel slide" data-bs-ride="carousel">
@@ -428,8 +483,10 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                        <p>Casa em Rio grande do Exemplo</p>
-                        <p><a href="Paginas/detalhes_riogrande.html">R$ 450.000</a></p>
+                        <div class="house-info">
+                            <p><b>Casa em Rio grande do Exemplo</b></p>
+                            <p><a href="Paginas/detalhes_riogrande.html">R$ 450.000</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -468,7 +525,13 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <p class="about-description">Descubra as melhores propriedades em São Paulo com a Imobiliária Exemplo! Nossa empresa oferece uma ampla carteira de imóveis que está esperando por você. Seja para compra, venda ou aluguel, temos opções que se encaixam perfeitamente nas suas necessidades. Nossa equipe de especialistas está sempre pronta para te ajudar a encontrar o imóvel dos seus sonhos com total transparência, segurança e profissionalismo. Não perca tempo, venha conhecer nossos serviços e encontre o lar ideal para você e sua família hoje mesmo. Confie na Imobiliária Exemplo para realizar o seu sonho da casa própria.</p>
+                        <p class="description-text">
+                            <b>Descubra as melhores propriedades em São Paulo com a Imobiliária Exemplo!</b>
+                            Nossa empresa oferece uma <i>ampla carteira de imóveis</i> que está esperando por você. Seja para compra, venda ou aluguel, temos opções que se encaixam perfeitamente nas suas necessidades.
+                            <b>Nossa equipe de especialistas</b> está sempre pronta para te ajudar a encontrar o imóvel dos seus sonhos com total transparência, segurança e profissionalismo.
+                            <b>Não perca tempo</b>, venha conhecer nossos serviços e encontre o lar ideal para você e sua família hoje mesmo.
+                            <i>Confie na Imobiliária Exemplo para realizar o seu sonho da casa própria.</i>
+                        </p>
                     </div>
                 </div>
             </div>
