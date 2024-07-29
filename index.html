@@ -400,7 +400,6 @@
             box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
         }
 
-
         .profile {
             background: #2a2b2f;
             border-radius: 10px 15px;
@@ -566,6 +565,7 @@
                     color: #6f00ff;
                     transition: color 0.3s;
                 }
+
         .avaliacao-texto {
             font-size: 1.2em; /* Tamanho da fonte */
             font-weight: bold; /* Negrito */
@@ -574,6 +574,59 @@
             text-align: center; /* Centralizar o texto */
         }
 
+        /* CSS personalizado para o botão "Enviar" */
+        #contato button {
+            font-family: inherit;
+            font-size: 20px;
+            background: royalblue;
+            color: white;
+            padding: 0.7em 2em; /* Ajuste do padding para esticar o botão */
+            display: flex;
+            align-items: center;
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+            #contato button span {
+                display: block;
+                margin-left: 0.5em; /* Ajuste do espaço entre o ícone e o texto */
+                transition: all 0.3s ease-in-out;
+            }
+
+            #contato button svg {
+                display: block;
+                transform-origin: center center;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            #contato button:hover .svg-wrapper {
+                animation: fly-1 0.6s ease-in-out infinite alternate;
+            }
+
+            #contato button:hover svg {
+                transform: translateX(1.2em) rotate(45deg) scale(1.1); /* Mover para a direita */
+            }
+
+            #contato button:hover span {
+                transform: translateX(1em); /* Mover para a direita */
+            }
+
+            #contato button:active {
+                transform: scale(0.95);
+            }
+
+        @keyframes fly-1 {
+            from {
+                transform: translateY(0.1em);
+            }
+
+            to {
+                transform: translateY(-0.1em);
+            }
+        }
     </style>
 </head>
 <body>
@@ -629,7 +682,8 @@
                     <h2>Nossos Serviços</h2>
                     <p>Oferecemos uma gama completa de serviços imobiliários para atender todas as suas necessidades.</p>
                 </div>
-                <div class="row">
+                <!-- Grid for Desktop -->
+                <div class="row d-none d-md-flex">
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
@@ -726,6 +780,45 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Carousel for Mobile -->
+                <div id="carouselServicos" class="carousel slide d-md-none" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color: #007BFF;">Venda de Imóveis</h5>
+                                    <p class="card-text">Oferecemos as melhores opções de <a href="#">venda de imóveis</a> em São Paulo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color: #007BFF;">Aluguel de Imóveis</h5>
+                                    <p class="card-text">Encontre o <a href="#">imóvel ideal</a> para alugar com a Imobiliária Exemplo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color: #007BFF;">Consultoria Imobiliária</h5>
+                                    <p class="card-text">Nossos especialistas estão prontos para te ajudar a <a href="#">encontrar o imóvel dos seus sonhos</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Adicione mais itens do carrossel conforme necessário -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselServicos" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselServicos" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </section>
@@ -929,8 +1022,8 @@
                             </div>
                         </div>
                     </div>
-                    </div>
-                </form>
+            </div>
+            </form>
             </div>
         </section>
     </main>
