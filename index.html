@@ -301,12 +301,12 @@
                 animation: fly-1 0.6s ease-in-out infinite alternate;
             }
 
-            button:hover svg {
-                transform: translateX(-1.2em) rotate(-45deg) scale(1.1); /* Move para a esquerda */
+            button:hover svg.move-left {
+                transform: translateX(-5em) rotate(-45deg) scale(1.1); /* Move para a esquerda */
             }
 
-            button:hover span {
-                transform: translateX(-5em); /* Move para a esquerda */
+            button:hover span.move-right {
+                transform: translateX(5em); /* Move para a direita */
             }
 
             button:active {
@@ -606,12 +606,12 @@
                 animation: fly-1 0.6s ease-in-out infinite alternate;
             }
 
-            #contato button:hover svg {
-                transform: translateX(1.2em) rotate(45deg) scale(1.1); /* Mover para a direita */
+            #contato button:hover svg.move-left {
+                transform: translateX(-5em) rotate(-45deg) scale(1.1); /* Move para a esquerda */
             }
 
-            #contato button:hover span {
-                transform: translateX(1em); /* Mover para a direita */
+            #contato button:hover span.move-right {
+                transform: translateX(5em); /* Move para a direita */
             }
 
             #contato button:active {
@@ -783,7 +783,7 @@
                 </div>
 
                 <!-- Carousel for Mobile -->
-                <div id="carouselServicos" class="carousel slide d-md-none" data-bs-ride="carousel">
+                <div id="carouselServicos" class="carousel slide d-md-none" data-bs-ride="carousel" data-bs-interval="3000">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="card">
@@ -820,7 +820,7 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-            </div>
+
         </section>
 
         <section id="galeria" class="py-5">
@@ -857,6 +857,7 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
+
                         <div class="house-info">
                             <p><b>Casa em Recanto do Exemplo</b></p>
                             <p><a href="detalhes_recanto.html">R$ 400.000</a></p>
@@ -997,14 +998,14 @@
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                          viewBox="0 0 24 24"
                                          width="24"
-                                         height="24">
+                                         height="24" class="move-left">
                                         <path fill="none" d="M0 0h24v24H0z"></path>
                                         <path fill="currentColor"
                                               d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
                                     </svg>
                                 </div>
                             </div>
-                            <span>Enviar</span>
+                            <span class="move-right">Enviar</span>
                         </button>
                         <div class="rating-section text-center">
                             <p class="avaliacao-texto">Avalie nosso site</p>
@@ -1080,6 +1081,32 @@
 
         new universalParallax().init({
             speed: 6.0
+        });
+
+        // Move the LinkedIn icon tooltip to the left
+        document.querySelectorAll('.tooltip-container').forEach(container => {
+            container.addEventListener('mouseover', function () {
+                this.querySelector('.tooltip').style.right = '60px';
+            });
+        });
+
+        // Change arrow direction for button hover
+        const buttons = document.querySelectorAll('button');
+
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', function () {
+                const svg = this.querySelector('svg');
+                svg.classList.add('move-left');
+                const span = this.querySelector('span');
+                span.classList.add('move-right');
+            });
+
+            button.addEventListener('mouseout', function () {
+                const svg = this.querySelector('svg');
+                svg.classList.remove('move-left');
+                const span = this.querySelector('span');
+                span.classList.remove('move-right');
+            });
         });
     </script>
 </body>
