@@ -301,12 +301,16 @@
                 animation: fly-1 0.6s ease-in-out infinite alternate;
             }
 
-            button:hover svg.move-left {
-                transform: translateX(-5em) rotate(-45deg) scale(1.1); /* Move para a esquerda */
+            /*button:hover svg {
+                transform: translateX(-5em) rotate(-45deg) scale(1.1);*/ /* Move 5 unidades para a esquerda */
+            /*}*/
+
+            button:hover span.carousel-control-next-icon {
+                transform: translateX(5em); /* Move 5 unidades para a direita */
             }
 
-            button:hover span.move-right {
-                transform: translateX(5em); /* Move para a direita */
+            button:hover span.carousel-control-prev-icon {
+                transform: translateX(-5em); /* Move 5 unidades para a direita */
             }
 
             button:active {
@@ -606,12 +610,12 @@
                 animation: fly-1 0.6s ease-in-out infinite alternate;
             }
 
-            #contato button:hover svg.move-left {
-                transform: translateX(-5em) rotate(-45deg) scale(1.1); /* Move para a esquerda */
+            #contato button:hover svg {
+                transform: translateX(1.2em) rotate(45deg) scale(1.1); /* Move to left */
             }
 
-            #contato button:hover span.move-right {
-                transform: translateX(5em); /* Move para a direita */
+            #contato button:hover span {
+                transform: translateX(1em); /* Move to rigth */
             }
 
             #contato button:active {
@@ -998,14 +1002,14 @@
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                          viewBox="0 0 24 24"
                                          width="24"
-                                         height="24" class="move-left">
+                                         height="24">
                                         <path fill="none" d="M0 0h24v24H0z"></path>
                                         <path fill="currentColor"
                                               d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
                                     </svg>
                                 </div>
                             </div>
-                            <span class="move-right">Enviar</span>
+                            <span>Enviar</span>
                         </button>
                         <div class="rating-section text-center">
                             <p class="avaliacao-texto">Avalie nosso site</p>
@@ -1096,16 +1100,12 @@
         buttons.forEach(button => {
             button.addEventListener('mouseover', function () {
                 const svg = this.querySelector('svg');
-                svg.classList.add('move-left');
-                const span = this.querySelector('span');
-                span.classList.add('move-right');
+                svg.style.transform = 'translateX(1.2em) rotate(45deg) scale(1.1)'; // Move to the right
             });
 
             button.addEventListener('mouseout', function () {
                 const svg = this.querySelector('svg');
-                svg.classList.remove('move-left');
-                const span = this.querySelector('span');
-                span.classList.remove('move-right');
+                svg.style.transform = 'translateX(0) rotate(0) scale(1)';
             });
         });
     </script>
